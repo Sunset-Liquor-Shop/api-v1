@@ -85,6 +85,5 @@ class AuthController {
     }
   }
 }
-// please note that this code assumes that you have already defined constants like DB_HOST, 
-// DB_USER, DB_PASSWORD, DB_NAME, JWT_SECRET, and JWT_EXPIRATION_TIME in your config.php file. 
+// please note that this code assumes that you have already defined constants like DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, JWT_SECRET, and JWT_EXPIRATION_TIME in your config.php file.
 // You would also need to install the firebase/php-jwt library for JWT token generation.
