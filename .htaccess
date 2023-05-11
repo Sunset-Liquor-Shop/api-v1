@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Rewrite API endpoints to index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Set HTTP headers to allow cross-origin resource sharing (CORS)
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Deny access to sensitive files
+<FilesMatch "(config\.php|\.htaccess|\.git)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
